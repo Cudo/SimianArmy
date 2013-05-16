@@ -85,6 +85,7 @@ public class BasicJanitorMonkey extends JanitorMonkey {
         if (!isJanitorMonkeyEnabled()) {
             return;
         } else {
+        	LOGGER.info("Monkey spotted in Cudo.");
             LOGGER.info(String.format("Marking resources with %d janitors.", janitors.size()));
             for (AbstractJanitor janitor : janitors) {
                 LOGGER.info(String.format("Running janitor for region %s", janitor.getRegion()));
